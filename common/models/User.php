@@ -155,14 +155,14 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
-    public static function hasOne(): bool
+    public static function hasRecords(): bool
     {
         return User::find()->exists();
     }
 
-    public static function hasNotOne(): bool
+    public static function hasNotRecords(): bool
     {
-        return !User::hasOne();
+        return !User::hasRecords();
     }
 
     public static function findByPartnerId(string $parentPartnerId): ?User

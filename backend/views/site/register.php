@@ -29,7 +29,7 @@ $this->title = 'Register';
         <?php $form = ActiveForm::begin(['id' => 'register-form']); ?>
 
         <?php
-        if (User::hasOne()) {
+        if (User::hasRecords()) {
             echo $form->field($model, 'parentPartnerId')->textInput([
                 'type' => 'text',
                 'maxlength' => '10',
@@ -40,7 +40,7 @@ $this->title = 'Register';
         ?>
 
         <?php
-        if (User::hasNotOne()) {
+        if (User::hasNotRecords()) {
             echo $form->field($model, 'selfPartnerId')->textInput([
                 'type' => 'text',
                 'maxlength' => '10',
