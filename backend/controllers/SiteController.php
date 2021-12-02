@@ -77,7 +77,7 @@ class SiteController extends Controller
 
         $model = new RegisterForm();
 
-        if (User::isNotExists()) {
+        if (User::notExists()) {
             $model->setScenario(RegisterForm::SCENARIO_FIRST_USER);
         }
 

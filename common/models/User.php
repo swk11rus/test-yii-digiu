@@ -25,6 +25,7 @@ use yii\web\IdentityInterface;
  * @property-read int $authKey
  * @property Menu $menu
  */
+
 class User extends ActiveRecord implements IdentityInterface
 {
 
@@ -154,14 +155,14 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->getAuthKey() === $authKey;
     }
 
-    public static function isExists(): bool
+    public static function exists(): bool
     {
         return User::find()->exists();
     }
 
-    public static function isNotExists(): bool
+    public static function notExists(): bool
     {
-        return !User::isExists();
+        return !User::exists();
     }
 
     public static function findByPartnerId(string $parentPartnerId): ?User
