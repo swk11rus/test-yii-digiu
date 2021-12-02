@@ -4,7 +4,7 @@ services:
   backend:
     build: backend
     ports:
-      - 21080:80
+      - 22080:80
     volumes:
       # Re-use local composer cache via host-volume
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
