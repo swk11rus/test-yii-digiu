@@ -4,7 +4,7 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=digiu_mysql_1;dbname=yii2advanced',
+            'dsn' => 'mysql:host=test-yii-digiu_mysql_1;dbname=yii2advanced',
             'username' => 'yii2advanced',
             'password' => 'secret',
             'charset' => 'utf8',
